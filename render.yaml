@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: ali-mvp
+    env: node
+    runtime: node
+    branch: main
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18.20.2
+      - key: AE_APP_KEY
+        sync: false
+      - key: AE_APP_SECRET
+        sync: false
+      - key: AE_REDIRECT_URI
+        sync: false
+      - key: AE_AUTH_URL
+        value: https://api-sg.aliexpress.com/oauth/authorize
+      - key: AE_TOKEN_URL_PRIMARY
+        value: https://api-sg.aliexpress.com/auth/token/create
+      - key: AE_TOKEN_URL_FALLBACK
+        value: https://oauth.aliexpress.com/token
+      - key: SESSION_SECRET
+        sync: false

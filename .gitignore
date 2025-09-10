@@ -1,0 +1,15 @@
+# Node/Next
+node_modules
+.next
+out
+dist
+.DS_Store
+
+# Vercel/Render
+.vercel
+.render
+
+# Env files
+.env
+.env.local
+.env*.local
